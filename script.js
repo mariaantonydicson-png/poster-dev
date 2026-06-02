@@ -1,3 +1,4 @@
+/*scroll effect*/
 const revealElements = document.querySelectorAll(
   '.section, .card, .service-card, .category-head, .quote-box, .contact-btn'
 );
@@ -20,8 +21,11 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 
 revealOnScroll();
-const toggle = document.getElementById("toggleBtn");
+//toggle menu for mobile
 
-    toggle.addEventListener("click", () => {
-        toggle.classList.toggle("active");
-    });
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+//open/close menu
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
