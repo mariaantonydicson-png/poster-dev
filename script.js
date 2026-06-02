@@ -25,7 +25,16 @@ revealOnScroll();
 
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
-//open/close menu
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+// Open / Close menu
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("show");
+});
+
+// Hide menu after clicking a link
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+  });
 });
